@@ -1,0 +1,246 @@
+﻿
+
+@mixin sm-co($breakpoint:false) {
+	&-offset {
+
+		&-left-1 {
+			@include breakpoint($md-down) {
+				margin-left: 1rem;
+			}
+		}
+
+		&-right-1 {
+			@include breakpoint($md-down) {
+				margin-right: 1rem;
+			}
+		}
+
+		&-bottom {
+			&-3 {
+				@include breakpoint($md-down) {
+					margin-bottom: 3rem;
+				}
+			}
+
+			&-6 {
+				@include breakpoint($md-down) {
+					margin-bottom: 6rem;
+				}
+			}
+		}
+	}
+}
+
+
+@mixin md-co($prefix: '') {
+	&-offset {
+		&-left {
+			&-3 {
+				@include breakpoint($md) {
+					margin-left: 3rem;
+				}
+
+				@include breakpoint($lg) {
+					margin-left: 2vw;
+				}
+
+				@include breakpoint($xxl) {
+					margin-left: 3vw;
+				}
+			}
+
+			&-10 {
+				@include breakpoint($md) {
+					margin-left: 3rem;
+				}
+
+				@include breakpoint($lg) {
+					margin-left: 8vw;
+				}
+
+				@include breakpoint($xxl) {
+					margin-left: 10vw;
+				}
+			}
+
+			&-15 {
+				@include breakpoint($md) {
+					margin-left: 8vw;
+				}
+
+				@include breakpoint($lg) {
+					margin-left: 20vw;
+				}
+
+				@include breakpoint($xxl) {
+					margin-left: 15vw;
+				}
+			}
+
+			&-20 {
+				@include breakpoint($md) {
+					margin-left: 20rem;
+				}
+
+				@include breakpoint($lg) {
+					margin-left: 10vw;
+				}
+
+				@include breakpoint($xxl) {
+					margin-left: 20vw;
+				}
+			}
+		}
+
+
+		&-right {
+			&-3 {
+				@include breakpoint($md) {
+					margin-right: 3rem;
+				}
+
+				@include breakpoint($lg) {
+					margin-right: 2vw;
+				}
+
+				@include breakpoint($xxl) {
+					margin-right: 3vw;
+				}
+			}
+
+			&-10 {
+				@include breakpoint($md) {
+					margin-right: 3rem;
+				}
+
+				@include breakpoint($lg) {
+					margin-right: 8vw;
+				}
+
+				@include breakpoint($xxl) {
+					margin-right: 10vw;
+				}
+			}
+
+			&-15 {
+				@include breakpoint($md) {
+					margin-right: 8vw;
+				}
+
+				@include breakpoint($lg) {
+					margin-right: 20vw;
+				}
+
+				@include breakpoint($xxl) {
+					margin-right: 15vw;
+				}
+			}
+
+			&-20 {
+				@include breakpoint($md) {
+					margin-right: 10vw;
+				}
+
+				@include breakpoint($lg) {
+					margin-right: 15vw;
+				}
+
+				@include breakpoint($xxl) {
+					margin-right: 20vw;
+				}
+			}
+
+			&-35 {
+				@include breakpoint($md) {
+					margin-right: 8rem;
+				}
+
+				@include breakpoint($lg) {
+					margin-right: 10vw;
+				}
+
+				@include breakpoint($xxl) {
+					margin-right: 35vw;
+				}
+			}
+		}
+
+		&-bottom {
+			&-3 {
+				@include breakpoint($md) {
+					margin-bottom: 3rem;
+				}
+
+				@include breakpoint($xxl) {
+					margin-bottom: 3vw;
+				}
+			}
+
+			&-5 {
+				@include breakpoint($md) {
+					margin-bottom: 5rem;
+				}
+
+				@include breakpoint($xxl) {
+					margin-bottom: 5vw;
+				}
+			}
+		}
+	}
+}
+
+
+@mixin xxl-co() {
+	&-offset {
+		&-left {
+			&-3 {
+				@include breakpoint($xxl) {
+					margin-left: 3vw;
+				}
+			}
+		}
+
+		&-right {
+			&-5 {
+				@include breakpoint($xxl) {
+					margin-right: 5vw;
+				}
+			}
+		}
+	}
+
+	&-offset {
+		&-left {
+			&-3 {
+				@include breakpoint($xxl) {
+					margin-left: 3vw;
+				}
+			}
+		}
+
+		&-right {
+			&-5 {
+				@include breakpoint($xxl) {
+					margin-right: 5vw;
+				}
+			}
+		}
+	}
+}
+
+@mixin custom-offsets($breakpoint: false) {
+	@if($breakpoint) {
+
+		@if($breakpoint == sm) {
+			@include sm-co();
+		}
+
+		@if($breakpoint == md) {
+			@include md-co();
+		}
+
+		@if($breakpoint == xxl) {
+			@include xxl-co();
+		}
+	}
+}

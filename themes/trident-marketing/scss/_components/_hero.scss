@@ -1,0 +1,82 @@
+﻿.hero {
+	position: relative;
+
+	@include breakpoint($landscape $lg-down) {
+		height: unset;
+	}
+
+	.inner {
+		display: flex;
+		flex-direction: column;
+
+		@include breakpoint($md-down) {
+			height: calc(100% - 75px); // 75px header height on mobile.
+		}
+
+		@include breakpoint($md) {
+			height: calc(100% - 134px);
+		}
+
+		@include breakpoint($lg) {
+			height: 100%;
+		}
+	}
+
+	.hero-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		@include breakpoint($md-down) {
+			justify-content: flex-end;
+		}
+
+		@include breakpoint($sm_l) {
+			padding-bottom: 3rem;
+		}
+	}
+
+
+
+}
+
+
+.feature-hero {
+	height: 100vh;
+	
+	.inner {
+		flex-direction: column;
+
+		&.container {
+			@include breakpoint($md-down) {
+				padding: 0;
+
+				h1, p {
+					padding-left: 25px;
+					padding-right: 25px;
+				}
+			}
+		}
+	}
+
+	.hero-content {
+		text-align: center;
+		flex-grow: 1;
+		justify-content: center;
+	}
+
+	.logo-wrapper {
+
+	}
+
+	
+}
+
+
+
+
+
+.secondary-hero {
+	
+}

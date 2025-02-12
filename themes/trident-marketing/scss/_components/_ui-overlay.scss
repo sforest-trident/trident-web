@@ -1,0 +1,148 @@
+﻿.ui-overlay {
+	width: 0;
+	height: 100vh;
+	background-color: #000;
+	opacity: 0;
+	transition: 0.5s;
+	position: fixed;
+	top: 0;
+	right: 0;
+	transition: 0.25s;
+
+	&.active {
+		//right: 0;
+		width: 100%;
+		//transition: right 0.25s ease;
+		transition: 0.25s;
+
+		.animated {
+			animation-delay: 0s;
+		}
+	}
+
+	.logo--wrapper {
+		display: flex;
+		//@include site-container;
+		a {
+			width: 100px;
+			height: 30px;
+			position: relative;
+			top: 45px;
+
+			svg {
+				fill: #fff;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+			}
+		}
+	}
+
+	a {
+		text-decoration: none;
+		width: 100%;
+	}
+	// Then apply class active
+	&.active {
+		opacity: 1;
+		z-index: 7;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+
+	.section--content {
+		display: flex;
+		flex-grow: 1;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+
+		&.active {
+			opacity: 1;
+		}
+
+		.panel--inner {
+			width: 100%;
+			max-width: 1100px;
+			display: flex;
+			justify-content: center;
+		}
+	}
+}
+
+.menu-item {
+	font-size: 1.4rem;
+	line-height: 3.4rem;
+
+	@include breakpoint($sm-down) {
+		//font-size: 6vw;
+	}
+
+	@include breakpoint($sm) {
+		font-size: 1.6rem;
+		line-height: 3.4rem;
+	}
+
+	a {
+		-webkit-tap-highlight-color: transparent;
+	}
+}
+
+.nav-handle {
+
+	svg {
+		width: 30px;
+		height: 20px;
+
+		@include breakpoint($md) {
+			width: 40px;
+			height: 30px;
+		}
+	}
+}
+
+
+.ui-handle {
+	color: #fff;
+	font-size: 1.5em;
+	pointer-events: fill;
+	text-decoration: none;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+
+	.ui-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 0 1px 1px rgba(0,0,0,0.15);
+		background-color: rgba(0,0,0,0.5);
+		background-image: linear-gradient(to top, transparent 50%, #fff 50%);
+		background-size: 100% 200%;
+		background-position: bottom;
+		transition: background-position 0.075s ease-in-out, color 0.35s ease-in-out;
+		width: 50px;
+		height: 50px;
+
+		@include breakpoint($lg) {
+			width: 100px;
+			height: 100px;
+		}
+	}
+
+	&:hover,
+	&:focus {
+
+		.ui-icon {
+			background-position: top;
+			color: #000;
+		}
+	}
+	// Background animation effect for hover state:
+	&.active {
+		.ui-icon {
+			background: #fff;
+			color: #000;
+		}
+	}
+}

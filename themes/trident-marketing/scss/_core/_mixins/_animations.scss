@@ -1,0 +1,17 @@
+﻿@mixin _pivot($pivot-off, $pivot-on) {
+	transform: rotate($pivot-off);
+	transition: transform ease-in-out 0.35s;
+
+	&:hover,
+	&:focus {
+		transform: rotate($pivot-on);
+	}
+}
+
+@mixin _pivot-right($pivot-off: 6deg, $pivot-on: 1deg) {
+	@include _pivot($pivot-off, $pivot-on);
+}
+
+@mixin _pivot-left($pivot-off: -6deg, $pivot-on: -1deg) {
+	@include _pivot($pivot-off, $pivot-on);
+}

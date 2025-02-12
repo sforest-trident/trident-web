@@ -1,0 +1,31 @@
+﻿footer {
+
+	.inner{
+
+	}
+	
+	
+	@include breakpoint($md-down){
+		text-align: center;
+	}
+	
+	@include breakpoint($xl){
+		
+	}
+	
+	
+	
+	.backTop {
+		position: absolute;
+
+		@include breakpoint($md-down) {
+			bottom: 10rem;
+			right: 1rem;
+		}
+
+		@include breakpoint($md) {
+			bottom: 8rem;
+			right: 2rem;
+		}
+	}
+}

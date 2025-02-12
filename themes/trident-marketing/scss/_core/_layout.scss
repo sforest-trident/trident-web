@@ -1,0 +1,60 @@
+﻿body {
+	background-color: map-get($site-colours, 'charcoal');
+	color: #fff;
+	position: relative;
+	overflow-x: hidden;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+.svg-sprite {
+	display: none;
+}
+
+.container {
+	@include breakpoint($md-down) {
+		padding: 0 15px;
+	}
+
+	@include breakpoint($md) {
+		padding: 0 50px;
+	}
+
+	@include breakpoint($xxl) {
+		padding: 0 3vw;
+	}
+}
+
+
+
+
+
+body.show-logo {
+	header {
+		.logo {
+			svg {
+				display: block !important;
+			}
+		}
+	}
+}
+
+
+main {
+	overflow: hidden;
+
+	@include breakpoint($md-down) {
+		//padding-top: 5rem;
+	}
+
+	@include breakpoint($md) {
+		//padding-top: 8rem;
+	}
+
+	@include breakpoint($lg) {
+		//padding-top: 4rem;
+	}
+}

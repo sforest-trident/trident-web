@@ -1,0 +1,50 @@
+﻿/*@import url("https://use.typekit.net/oex0swt.css");
+*/
+
+/*@font-face {
+	font-family: 'Lato light';
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}*/
+
+
+/*@font-face {
+	font-family: 'Lato Bold';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Lato Black';
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Rubik:wght@800&display=swap');
+
+$primary-font-family:  'Karla', 'Roboto', Arial, sans-serif;
+$secondary-font-family: 'Rubik', 'Helvetica', Arial, sans-serif;
+
+// -------
+
+
+body{
+	font-family: $primary-font-family;
+}
+
+h1, h2, h3, h4, h5, h6{
+	margin: unset;
+	padding: unset;
+	font-family: $secondary-font-family;
+	font-weight: 400;
+}
+
+p{
+	margin: unset;
+	padding: unset;
+}

@@ -1,0 +1,69 @@
+﻿header {
+	width: 100%;
+	//background-color: map-get($site-colours, 'charcoal');
+	z-index: 10;
+	position: absolute;
+	pointer-events: none;
+
+	@include breakpoint($md-down) {
+		position: fixed;
+		background-color: rgba(42,43,46, 0.75);
+		backdrop-filter: blur(4px);
+	}
+
+
+	&.offscreen {
+		@include breakpoint($md) {
+			position: fixed;
+			top: -100px;
+			transition: top linear 0.085s;
+		}
+	}
+
+
+	&.scrolled {
+		@include breakpoint($md) {
+			background-color: rgba(42,43,46, 0.75);
+			backdrop-filter: blur(4px);
+			top: 0;
+			transition: top linear 0.15s;
+		}
+
+		.logo {
+			svg {
+				@include breakpoint($md) {
+					display: block !important;
+				}
+			}
+		}
+	}
+
+
+	.inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include breakpoint($md-down) {
+			@include padding-y(20px);
+			@include padding-x(20px);
+		}
+
+		@include breakpoint($md) {
+			@include padding-y(50px);
+		}
+
+		.logo {
+			pointer-events: all;
+
+			svg {
+				width: 123px;
+				height: 18px;
+
+				@include breakpoint($md) {
+					display: none;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,58 @@
+﻿.offscreen-nav {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+
+	.nav-wrapper {
+		position: relative;
+		flex-grow: 1;
+		box-sizing: border-box;
+		padding: 0 0.5em;
+		text-align: right;
+
+		@include breakpoint($sm) {
+			padding: unset;
+		}
+	}
+
+
+
+	ul {
+		transition: visibility 2s linear;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100vh;
+		padding: unset;
+		text-align: center;
+
+		li {
+
+			@include breakpoint($md-down) {
+				padding: 1rem 0;
+			}
+
+			@include breakpoint($md) {
+				padding: 1vw 0;
+			}
+
+			a {
+				color: #fff;
+				font-size: 2rem;
+				display: block;
+				margin-bottom: 1rem;
+				font-weight: 900;
+				text-transform: uppercase;
+
+				@include breakpoint($md-down) {
+					font-size: 8vw;
+				}
+
+				@include breakpoint($md) {
+					font-size: 2vw;
+				}
+			}
+		}
+	}
+}

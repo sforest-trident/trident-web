@@ -1,0 +1,855 @@
+﻿/*
+Theme Name: Trident Marketing
+Theme URI: https://tridentmarketinguk.com/
+Author: Trident Marketing
+Author URI: https://tridentmarketinguk.com/
+Description: A custom Wordpress theme for Trident Marketing Ltd.
+Version: 2.0
+Text Domain: trident-web
+*/
+
+
+// Import vendor files
+//@import '../lib/bootstrap/bootstrap.scss';
+
+@import "_core/_variables";
+@import "_core/_mixins";
+@import "_vendor/_breakpoint";
+@import "_vendor/_normalize";
+
+// Core
+@import "_core/_colours.scss";
+@import "_core/_core.scss";
+@import "_core/_typography.scss";
+@import "_core/_layout.scss";
+
+// Components
+@import "_components/_header.scss";
+@import "_components/_hero.scss";
+@import "_components/_ui-overlay.scss";
+@import "_components/_offscreen-nav.scss";
+@import "_components/_sections.scss";
+@import "_components/_buttons.scss";
+@import "_components/_footer.scss";
+
+html{
+	height: -webkit-fill-available;
+}
+
+body{
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+ 
+/*
+	position: relative;
+
+&:after{
+	background: red;
+	color: #fff;
+	content: 'test';
+	display: block;
+	top: 0;
+	left: 0;
+	position: fixed;
+	
+	@include breakpoint($md-down){ 
+		content: 'SM';
+	}
+	
+	@include breakpoint($md){
+		content: 'MD';
+	}
+	
+	@include breakpoint($lg){
+		content: 'LG';
+	}
+	
+	@include breakpoint($xl){
+		content: 'XL';
+	}
+	
+	@include breakpoint($xxl){
+		content: 'XXL';
+	}
+}
+	*/
+}
+
+
+
+
+.home {
+  header {
+    display: none;
+  }
+
+  .feature-hero {
+    background-image: url("../images/van-pie.1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0; 
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      content: "";
+      display: block;
+
+      background-color: rgba(0, 0, 0, 0.65);
+    }
+
+    .inner {
+      display: flex;
+      height: 100%;
+			
+			@include breakpoint($md){
+				padding: unset;
+			}
+    }
+
+    .hero {
+      &-content {
+        position: relative;
+        padding: 0 5vw;
+				
+				@include breakpoint($md){
+					max-width: 1024px;
+					margin: auto;
+				}
+				
+				.heading{
+					text-transform: uppercase;
+				
+					@include breakpoint($md){
+						font-size: 3rem;
+						
+					}
+				}
+				
+				.content-body{
+					line-height: 1.5rem;
+					
+					@include breakpoint($md){
+						font-size: 1.25rem;
+						line-height: 1.5rem;
+					}
+				}
+
+
+				.logo-wrapper{
+					img{
+						@include breakpoint($md-down){
+							width: 150px;
+						}
+
+						@include breakpoint($md){
+							width: 300px;
+						}
+					}
+				}
+				
+        .heading {
+          padding: 1rem 0 2rem;
+					
+					//@include breakpoint($md-down){
+						//font-wsi
+        }
+
+        .cta-block {
+          padding-top: 2.5rem;
+          display: flex;
+					width: 100%;
+					
+			@include breakpoint($md-down){
+				flex-direction: column;
+				padding-left: 12vw;
+				padding-right: 12vw;
+				max-width: 400px;
+
+			}
+					
+			@include breakpoint($md){
+				align-items: baseline;
+				justify-content:  center;
+				padding-top: 4rem;
+			}
+
+          .cta {
+			  
+			  &.primary{
+			  	@include btn($bg-colour: rgba(0,0,0,0.25), $text-colour: #fff, $border-colour: #fff, $bg-hover-colour: rgba(0,0,0,0.85), $text-hover-colour: #fff);
+			  }
+			  
+			  &.secondary{
+			  	@include btn($bg-colour: #fff, $text-colour: #111, $border-colour: #fff, $bg-hover-colour: rgba(255,255,255,0.65), $text-hover-colour: #111);
+			  }
+			  
+			@include breakpoint($md-down){
+				margin-bottom: 1rem;
+
+				padding: 0.75rem 0.5rem;
+			}
+
+			@include breakpoint($md){
+				margin-right: 2rem;
+				width: 100%;
+				max-width: 200px;
+				padding: 1rem;
+			}
+            
+
+            &:last-of-type {
+              margin: unset;
+            }
+						
+						
+          }
+        }
+      }
+      &-footer {
+        background-color: #000;
+
+        display: flex;
+        width: 100%;
+				position: relative;
+
+        .contact-block {
+          text-align: center;
+          display: flex;
+          flex-grow: 1;
+          justify-content: center;
+					
+					@include breakpoint($md){
+						flex: 0 0 33.3%;
+					}
+
+          a {
+            color: #fff;
+            display: block;
+            padding: 1em;
+            width: 100%;
+            border-right: 1px solid rgba(255, 255, 255, 0.35);
+						text-decoration: none;
+						cursor: pointer;
+						transition: all ease-in 0.2s;
+						
+						&:hover{
+							background-color: rgba(255,255,255,0.055);
+							color: antiquewhite;
+						}
+						
+						@include breakpoint($md){
+							display: flex;
+							flex-direction: column;
+							
+							padding: 1rem;
+						}
+						
+						@include breakpoint($xl){
+							padding: 1.25rem 1rem;
+						}
+          }
+
+          &:last-of-type {
+            a {
+              border-right: none;
+            }
+          }
+
+
+					
+          .contact{
+						&-icon{
+							@include breakpoint($md){
+								font-size: 24px;
+								margin-bottom: 0.5rem;
+							}
+							
+							@include breakpoint($xl){
+								font-size: 34px;
+								margin-bottom: 1rem;
+							}
+						}
+						
+						&-data {
+							@include breakpoint($md-down){
+								display: none;
+							}
+						}
+					}
+        }
+      }
+    }
+  }
+}
+
+.section {
+  &-content {
+    .container {
+		padding: 30px 20px;
+		text-align: center;
+			
+		@include breakpoint($md){
+			padding: 2rem 30px;
+		}
+    }
+	  
+	  .content-heading{
+		  margin-bottom: 2rem;
+	  }
+
+	  hr{
+		  margin-top: 2rem;
+		  margin-bottom: 2rem;
+		  border-width: 1px 0 0 0;
+	  }
+	  
+	  
+  	&#intro-block{
+			.inner{
+				@include breakpoint($lg){
+					padding: unset;
+				}
+			}
+			
+			.container{
+				@include breakpoint($lg){
+					padding: 7rem 2rem;
+				}
+			}
+			
+			.content{
+
+				&-heading{
+					margin-bottom: 0.5rem;
+				}
+
+				&-sub-heading{
+					
+					@include breakpoint($lg-down){
+						margin-bottom: 1.5rem;
+						padding-bottom: 1.5rem;
+						border-bottom: 1px solid rgba(255,255,255,0.15);
+						color: #b87ead;
+					}
+					
+					@include breakpoint($lg){
+						margin-bottom: 1rem;
+					}
+				}
+				
+				&-body{
+					
+					h3{
+						margin-bottom: 0.25rem;	
+					}
+					
+					p{
+						@include breakpoint($lg-down){
+							line-height: 1.25rem;
+							margin-bottom: 1rem;
+						}
+					}
+					
+					hr{
+						border: unset;
+						
+						@include breakpoint($lg-down){		
+							border-top: 1px solid rgba(255,255,255,0.15);
+						}
+					}
+					
+					
+					.cta-block{
+						
+						@include breakpoint($md-down){
+							padding: 1rem 0;	
+						}
+						
+						@include breakpoint($md){
+							padding: 1rem 0 0;	
+						}
+						
+						.cta{
+							display: inline-block;
+
+							@include breakpoint($lg-down){
+								@include btn($bg-colour: transparent, $text-colour: #fff, $border-colour: #fff, $bg-hover-colour: map-get($site-colours, 'latte'), $text-hover-colour: map-get($site-colours, 'espresso'));				
+
+								min-width: 200px;
+							}
+
+							@include breakpoint($lg){
+								@include btn($bg-colour: map-get($site-colours, 'espresso'), $text-colour: #fff, $bg-hover-colour: #fff);					
+							}
+						}
+					}
+					
+				}
+					
+				&-image{
+					
+					
+					
+					@include breakpoint($lg){
+						overflow: hidden;
+						background-color: map-get($site-colours, 'latte');
+						position: relative;
+					}
+					
+					img {
+					  max-width: 100%;
+						
+						@include breakpoint($lg-down){
+							border-radius: 0 0 0.5rem 0.5rem;
+						}
+
+						@include breakpoint($lg){
+							//position: absolute;
+							//top: 50%;
+							//left: 50%;
+							//transform: translate(-50%, -50%);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.two-col{
+	@include breakpoint($lg){
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.col{
+		
+		
+		
+		@include breakpoint($lg){
+			display: flex;
+			flex-direction: column;
+			flex: 0 0 50%;
+		}
+		
+		&.content-body{
+			@include breakpoint($lg-down){
+				background-color: rgba(255,255,255,0.05);
+				padding: 1.5rem;
+				border-radius: 0.5rem 0 0 0.5rem;
+			}
+			
+			@include breakpoint($lg){
+				background-color: map-get($site-colours, 'latte');
+				color: #333;
+				padding: 2rem;
+			}
+		}	
+	}
+}
+
+
+.boxed{
+	@include breakpoint($lg){
+		margin: 0 5vw;
+	}
+	
+	.col{
+	
+		&.content-body{
+			@include breakpoint($lg){
+				justify-content: center;
+				text-align: left;
+			}
+			
+			p{
+				@include breakpoint($lg){
+					margin-bottom: 1rem;
+				}
+			}
+		}
+	}
+}
+
+
+.section-cta{
+	background-color: #558998;	
+	position: relative;
+	
+	.inner{
+		@include breakpoint($lg){
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 3rem;
+		}
+	}
+	
+	.heading{
+		@include breakpoint($md){
+			font-size: 1.5rem;
+		}
+	}
+	
+
+	
+	.cta{
+		margin-top: 1rem;
+		display: inline-block;
+		
+		@include breakpoint($lg-down){
+			padding: 1rem 3rem;
+    		margin-top: 1.5rem;
+		}
+		
+		@include breakpoint($lg){
+			margin: unset;
+			margin-left: 2rem;
+				
+		}
+		
+		@include btn($bg-colour: map-get($site-colours, '#558998'), $text-colour: #fff, $border-colour: #fff, $bg-hover-colour: #fff, $text-hover-colour: #558998);
+	}
+}
+
+
+
+#tap2shop_widget .tap2shop_frame ul .tap2shop_photo_block{
+	margin: unset !important;
+}
+
+
+
+
+
+
+.gallery {
+	display: flex;
+	padding: 2px;
+	transition: .3s;
+	opacity: 0.6;
+	
+	&:hover &__image {
+		filter: grayscale(1);
+		opacity: 1;
+	}
+	
+	&__column {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		
+		@include breakpoint($md-down){
+			width: 33%;
+			
+			&:nth-child(n+4){
+				display: none;
+			}
+		}
+		
+		@include breakpoint($lg-down){
+			width: 33%;
+			
+			&:nth-child(n+6){
+				display: none;
+			}
+		}
+	}
+	
+	&__link {
+		margin: 2px;
+		overflow: hidden;
+		
+		&:hover {
+			.gallery__image {
+				filter: grayscale(0);
+			}
+			
+			.gallery__caption {
+				opacity: 1;
+			}
+		}
+	}
+	
+	&__thumb {
+		position: relative;
+		margin: unset;
+	}
+	
+	&__image {
+		display: block;
+		width: 100%;
+		transition: .3s;
+		
+		&:hover {
+			transform: scale(1.1);
+			cursor: pointer;
+		}
+	}
+	
+	&__caption {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 25px 15px 15px;
+		width: 100%;
+		font-family: 'Raleway', sans-serif;
+		font-size: 16px;
+		color: white;
+		opacity: 0;
+		background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255 ,255 , 0) 100%);
+		transition: .3s;
+	}
+}
+
+
+
+
+.values-block{
+	background-image: url("../images/recycle.jpg");
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	
+	@include breakpoint($md){
+		padding: 5rem 0;	
+	}
+	
+
+	&:before {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0; 
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		content: "";
+		display: block;
+
+		background-color: rgba(0, 0, 0, 0.8);
+		
+	}
+	
+	.inner{
+		position: relative;
+		background-color: rgba(255,255,255,0.15);
+		margin: auto;
+		
+		@include breakpoint($md-down){
+			padding: 5rem 40px;	
+		}
+		
+		@include breakpoint($md){
+			padding: 2rem 5rem;
+			max-width: 800px;
+		}
+		
+		@include breakpoint($xl){
+			max-width: 1024px;
+			padding: 4rem 5rem;
+		}
+	}
+	
+	.content{
+		&-body{
+		text-align: left;
+			
+			p{
+				margin-bottom: 1rem;
+			}
+			ul{
+				list-style: disc;
+				padding-left: 1rem;
+				padding-top: 1rem;
+				
+				@include breakpoint($md){
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+				}
+				
+				li{
+					margin-bottom: 0.5rem;
+					
+					@include breakpoint($md){
+						flex: 0 0 45%;
+					}
+					
+					&:last-of-type{
+						margin-bottom: unset;
+					}
+					
+				}
+				
+			}
+		}
+	}
+}
+
+
+.legal-section{
+	background-color: map-get($site-colours, 'flat-white');
+	color: #000;
+	
+	.inner{
+		@include breakpoint($xl){
+			max-width: 1380px;
+			margin: auto;
+			padding-top: 4rem;
+			padding-bottom: 3rem;
+		}
+	}
+	
+	.content-heading{
+		color: rgba(255,255,255,0.35);
+		margin-bottom: 1rem;
+		
+		@include breakpoint($md){
+			font-size: 2rem;
+		}
+		
+		@include breakpoint($xl){
+			font-size: 3rem;
+			color: rgba(255,255,255,0.25);
+		}
+	}
+	
+	hr{
+		border-color: rgba(0,0,0,0.095);
+	}
+	
+	a{
+		color: #a5ae47;
+	}
+	
+	
+	.fsa-block{
+		max-width: 400px;
+		margin: auto;
+		margin-top: 2rem;
+		background-color: #fff;
+		border: 10px solid #a8a196;
+		border-radius: 5px;
+			
+		.listhyperlink{
+			display: block;
+			background-color: #111;
+			color: #fff;
+			text-decoration: none;
+			margin-bottom: 5px;
+			padding: 0.5rem 0;
+		}
+		
+		img{
+			margin: 0.5rem 0 0 0;
+		}
+		
+		a:not(.listhyperlink){
+			display: none;
+		}
+	}
+	
+}
+
+.promo-section{
+	background-color: #5d2d68;
+}
+
+
+
+.eco-section{
+	
+	.inner{
+		@include breakpoint($lg){
+			max-width: 1024px;
+			margin: auto;
+		}
+	}
+	
+	.section-icon{
+		display: flex;
+		//background: rgba(255,255,255,0.1);
+		background-color: #5b8c5b;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		padding: 1rem;
+		overflow: hidden;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+		margin-bottom: 1rem;
+		
+		@include breakpoint($xl){
+			width: 100px;
+			height: 100px;
+		}
+
+		svg {
+			height: 95%;
+			
+			@include breakpoint($xl){
+				height: 75%;
+			}
+		}
+	}
+	
+	a{
+		color: #4faac6	;
+	}
+}
+
+
+
+.social-section{
+	
+	.inner{
+		@include breakpoint($md-down){
+			padding: 50px 20px;
+		}
+	}
+	
+	.social-links{
+		display: flex;
+		justify-content: center;
+		margin-top: 2rem;
+		
+		li{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 0.5rem;
+			
+			&:last-of-type{
+				margin-right: none;
+			}
+			
+			a{
+				color: #fff;
+				font-size: 34px;
+				display: block;
+				padding: 2rem;
+				background: rgba(225,255,255,0.1);
+				transition: all ease-in 0.2s;
+				
+				&:hover{
+					background: rgba(225,255,255,0.2);
+				}
+			}
+		}
+	}
+}
+
+
+

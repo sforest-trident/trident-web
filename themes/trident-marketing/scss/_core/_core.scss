@@ -1,0 +1,80 @@
+﻿// General helpers and common stuff
+
+// BG  colour classes based on variable colours
+@include _bg-colours();
+@include _text-colours();
+@include _stroke-colours();
+
+
+
+@include _all-paddings('.');
+@include _all-margins('.');
+@include _content-helper-classes('.');
+@include _text-helper-classes;
+
+@include _display-helpers('.');
+@include _flex-helpers('.');
+
+
+// SM breakpoint
+.sm {
+	@include breakpoint($md-down) {
+		@include _all-paddings('-');
+		@include _all-margins('-');
+
+		@include _display-helpers('-');
+		@include _flex-helpers('-');
+		@include _content-helper-classes('-');
+	}
+
+	@include custom-offsets('sm');
+}
+
+// MD breakpoint
+.md {
+	@include breakpoint($md) {
+		@include _all-paddings('-');
+		@include _all-margins('-');
+
+		@include _display-helpers('-');
+		@include _flex-helpers('-');
+	}
+
+	@include custom-offsets('md');
+}
+
+.lg {
+	@include breakpoint($lg) {
+		@include _all-paddings('-');
+		@include _all-margins('-');
+
+		@include _display-helpers('-');
+		@include _flex-helpers('-');
+	}
+}
+
+.xxl {
+	@include custom-offsets('xxl');
+}
+
+
+
+// Reset -----
+ul{
+	margin: unset;
+	padding: unset;
+	list-style: none;
+}
+
+
+
+// Custom helpers and stuff
+.content-heading,
+.content-subheading {
+	text-transform: uppercase;
+	font-weight: 900;
+}
+
+.no-scroll{
+	overflow: hidden;
+}
