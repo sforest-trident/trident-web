@@ -1,4 +1,7 @@
-﻿// Colour Palette
+﻿// -- Variables.css
+// This is essentially anything that is a variable in the CSS, such as colours, fonts, breakpoints, etc.
+
+// Colour Palette
 $site-colours: ( 
     'white': #fff,
     'black': #000,
@@ -7,6 +10,27 @@ $site-colours: (
     'charcoal': #2A2B2E,
     'light-grey': #f4f3ee
 );
+
+//SASS Variables
+$body-text-color: #000;
+$body-bg-color: #fff;
+$body-font-family: 'Arial', sans-serif;
+$body-font-size: 16px;
+$body-line-height: 24px; 
+$body-font-weight: 400;
+
+$primary-font-family:  'Gotham Bold', Arial, sans-serif;
+$secondary-font-family: 'Gotham Bold', Arial, sans-serif;
+
+// CSS Variables (for css output)
+// Commented these out for now as couldn't get this working in the SASS and not sure it's entirely necessary atm.
+/*
+--body-text-color: #{$body-text-color};
+--body-bg: #{$body-bg-color};
+--body-font: #{$body-font-family};
+--body-font-size: #{$body-font-size};
+--body-line-height: #{$body-line-height}; 
+*/
 
 
 
@@ -18,7 +42,7 @@ $xl: 1367px;
 $xxl: 1919px;
 
 $sm-down: max-width ($sm - 1);
-$md-down: max-width ($md - 1);
+$md-down: max-width ($md - 1); 
 $lg-down: max-width ($lg - 1);
 $xl-down: max-width ($xl - 1);
 
@@ -51,9 +75,8 @@ $xl-down_l: (max-width $xl) $landscape;
 $xxl-down_l: (max-width $xxl) $landscape;
 
 
-
-
-
 $spacing-iterations: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 20);
 $min-height-iterations: (42, 65, 89, 90, 100, 105, 114, 134, 140, 170, 190);
 $max-width-iterations: (348, 361);
+
+

@@ -1,12 +1,16 @@
-﻿body {
-	background-color: map-get($site-colours, 'charcoal');
-	color: #fff;
-	position: relative;
-	overflow-x: hidden;
+﻿* {
+	box-sizing: border-box;
 }
 
-* {
-	box-sizing: border-box;
+body {
+	background-color: $body-bg-color;
+	color: $body-text-color; //--var(body-color);
+	position: relative;
+	overflow-x: hidden;
+	font-family: $body-font-family;
+	font-size: $body-font-size;
+	font-weight: $body-font-weight;
+	line-height: $body-line-height;
 }
 
 
@@ -15,32 +19,9 @@
 }
 
 .container {
-	@include breakpoint($md-down) {
-		padding: 0 15px;
-	}
-
-	@include breakpoint($md) {
-		padding: 0 50px;
-	}
-
-	@include breakpoint($xxl) {
-		padding: 0 3vw;
-	}
+	@include container();
 }
 
-
-
-
-
-body.show-logo {
-	header {
-		.logo {
-			svg {
-				display: block !important;
-			}
-		}
-	}
-}
 
 
 main {

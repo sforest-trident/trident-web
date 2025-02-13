@@ -1,6 +1,5 @@
 ﻿header {
 	width: 100%;
-	//background-color: map-get($site-colours, 'charcoal');
 	z-index: 10;
 	position: absolute;
 	pointer-events: none;
@@ -32,7 +31,7 @@
 		.logo {
 			svg {
 				@include breakpoint($md) {
-					display: block !important;
+					width: 100px;
 				}
 			}
 		}
@@ -52,17 +51,17 @@
 		@include breakpoint($md) {
 			@include padding-y(50px);
 		}
+	}
 
-		.logo {
-			pointer-events: all;
+	.logo {
+		pointer-events: all;
 
-			svg {
-				width: 123px;
-				height: 18px;
+		img {
+			width: 123px;
+			height: 18px;
 
-				@include breakpoint($md) {
-					display: none;
-				}
+			@include breakpoint($md) {
+				width: 150px;
 			}
 		}
 	}

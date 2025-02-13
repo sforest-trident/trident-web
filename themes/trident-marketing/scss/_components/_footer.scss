@@ -1,6 +1,13 @@
 ﻿footer {
 
+	background-color: map-get($site-colours, 'red');
+	color: map-get($site-colours, 'white');
+	
 	.inner{
+		@include container();
+
+		padding-top: 3rem;
+		padding-bottom: 3rem;
 
 	}
 	
@@ -11,6 +18,19 @@
 	
 	@include breakpoint($xl){
 		
+	}
+
+	.footer-logo{
+		svg{
+			//width: 80px; // determines the width of the svg box wrapper.
+			use{
+				fill: #fff;
+
+				.st1 {
+					fill: #e30613;
+				}
+			}
+		}
 	}
 	
 	

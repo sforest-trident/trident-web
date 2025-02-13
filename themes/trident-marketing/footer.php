@@ -12,10 +12,10 @@
 ?>
 
 	<footer class="site-footer">
-		<div class="container">
+		<div class="inner container">
 			<!-- Footer > Logo -->
 			<div class="footer-logo">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/trident-logo_white.png" />
+				<svg><use xlink:href="#trident-t"></use></svg>
 			</div>
 			<!-- .Footer > Logo -->
 			 
@@ -84,6 +84,7 @@
 	</footer><!-- .site-footer -->
 </div><!-- #page -->
 
+<?php include('template-parts/svg-sprite.php'); ?>
 <?php wp_footer(); ?>
 
 </body>

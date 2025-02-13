@@ -1,4 +1,4 @@
-﻿.hero {
+﻿.section__hero {
 	position: relative;
 
 	@include breakpoint($landscape $lg-down) {
@@ -8,6 +8,8 @@
 	.inner {
 		display: flex;
 		flex-direction: column;
+
+		@include container();
 
 		@include breakpoint($md-down) {
 			height: calc(100% - 75px); // 75px header height on mobile.
@@ -19,6 +21,11 @@
 
 		@include breakpoint($lg) {
 			height: 100%;
+			min-height: 778px;
+			justify-content: center;
+			align-items: center;
+			padding-top: 3rem;
+			padding-bottom: 3rem;	
 		}
 	}
 

@@ -31,7 +31,8 @@
 		<div class="inner-wrapper">
 			<div class="site-branding">
 				<!-- Header > Logo -->
-				<h1 class="header-logo site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/img/swift-header-logo.png" alt="<?php bloginfo( 'name' ); ?>" /></a></h1>
+				<div class="header-logo site-title logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/images/trident-logo.svg" /></a>
+				</h1>
 				<?php
 				$trident_web_description = get_bloginfo( 'description', 'display' );
 				if ( $trident_web_description || is_customize_preview() ) :
