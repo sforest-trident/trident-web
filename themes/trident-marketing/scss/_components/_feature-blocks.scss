@@ -1,0 +1,25 @@
+.feature-blocks{
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint($lg){
+        flex-direction: row;
+    }
+
+    .fb{
+        &__block{
+            background-color: map-get($site-colours, 'l-grey');
+            padding: 1rem;
+
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+
+        &__heading{
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+    }
+}

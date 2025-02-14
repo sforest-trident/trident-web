@@ -24,11 +24,44 @@
 			margin-top: 2rem;
 			margin-bottom: 2rem;
 			border-width: 1px 0 0 0;
-		}		
+		}
+		
+		.content{
+			&__heading{
+				font-size: 55px;
+				font-family: $font-heading-family;
+			}
+		}
 	}
 	
 	// .section__who-we-are
 	&__who-we-are {
 
+		.content__heading{
+			margin-bottom: 2rem;
+		}
+
+		.feature-blocks{}
+
+	}
+
+	&__our-team{
+		.content__heading{
+			margin-bottom: 2rem;
+		}
+
+		.featured-services{
+			
+		}
+  	}
+
+
+
+	// Section colour variations ---------------------
+	&__blue{
+		background-color: map-get($site-colours, 'blue');
+		color: white;
 	}
   }
+
+  

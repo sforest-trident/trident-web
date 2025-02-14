@@ -1,0 +1,24 @@
+.featured-services{
+    display: flex;
+    gap: 2rem;
+
+    @include breakpoint($md-down){
+        flex-direction: column;
+    }
+
+    .fs{
+        &__block{
+
+        }
+        &__heading{
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        &__detail{
+
+        }
+    }
+}

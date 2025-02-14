@@ -24,11 +24,12 @@ get_header();
 
 
         <section class="section__hero bg-red text-white">
+            <!-- <section class="section__hero bg-red text-white __uses-bg-image __has-overlay" style="background-image: url(<?php //echo get_template_directory_uri(); ?>/images/red-abstract-background.jpg);"> ?>-->
             <div class="inner">
-                <h1>Putting your brands and business on the map</h1>
-                <p>We are Trident. A mulit-disciplinary marketing agency helping take your marketing to the next level.</p>
+                <h1 class="hero__heading page__heading">Putting your brands and business on the map</h1>
+                <p class="hero__strapline">We are Trident. A mulit-disciplinary marketing agency helping take your marketing to the next level.</p>
 
-                <div class="cta-block">
+                <div class="hero__cta-block cta-block">
                     <a href="#intro-block" class="cta primary">What we offer</a>
                     <a href="#contact-us" class="cta secondary">Get in touch</a>
                 </div>
@@ -51,66 +52,70 @@ get_header();
 
         <section class="section__content section__who-we-are">
             <div class="inner container">
-                <h3 class="content__heading text-red">We are...</h3>
-                <ul>
-                    <li>
-                        <h4>Creative</h4>
+                <h3 class="content__heading primary-heading text-red">We are...</h3>
+
+                <ul class="feature-blocks">
+                    <li class="fb__block">
+                        <h4 class="fb__heading font-heading text-red">Creative</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan laoreet nibh, ac posuere nisl pretium a. Nullam laoreet dui sit amet lacus lobortis, sit amet finibus nulla maximus. Fusce viverra est quis fringilla feugiat. Nullam leo velit, tristique at elit ut, congue vestibulum ligula. Mauris mollis rhoncus felis et laoreet.</p>
                     </li>
-                    <li>
-                        <h4>Comprehensive</h4>
+                    <li class="fb__block">
+                        <h4 class="fb__heading font-heading text-red">Comprehensive</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan laoreet nibh, ac posuere nisl pretium a. Nullam laoreet dui sit amet lacus lobortis, sit amet finibus nulla maximus. Fusce viverra est quis fringilla feugiat. Nullam leo velit, tristique at elit ut, congue vestibulum ligula. Mauris mollis rhoncus felis et laoreet.</p>
                     </li>
-                    <li>
-                        <h4>Collaborative</h4>
+                    <li class="fb__block">
+                        <h4 class="fb__heading font-heading text-red">Collaborative</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan laoreet nibh, ac posuere nisl pretium a. Nullam laoreet dui sit amet lacus lobortis, sit amet finibus nulla maximus. Fusce viverra est quis fringilla feugiat. Nullam leo velit, tristique at elit ut, congue vestibulum ligula. Mauris mollis rhoncus felis et laoreet.</p>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <section class="section__content section__our-team">
+        <section class="section__content section__our-team section__blue">
             <div class="inner container">
-                <h3>Our Services</h3>
+                <h3 class="content__heading primary-heading">Our Services</h3>
 
-                <ul>
-                    <li>
-                        <h4>Strategy &amp; Planning</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan laoreet nibh, ac posuere nisl pretium a. Nullam laoreet dui sit amet lacus lobortis, sit amet finibus nulla maximus. Fusce viverra est quis fringilla feugiat. Nullam leo velit, tristique at elit ut, congue vestibulum ligula. Mauris mollis rhoncus felis et laoreet.</p>
+                <ul class="sideways-slider featured-services slider-block">
+                    <li class="fs__block slider__item">
+                        <h4 class="fs__heading">Strategy &amp; Planning</h4>
+                        <p class="fs__detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan laoreet nibh, ac posuere nisl pretium a. Nullam laoreet dui sit amet lacus lobortis, sit amet finibus nulla maximus. Fusce viverra est quis fringilla feugiat. Nullam leo velit, tristique at elit ut, congue vestibulum ligula. Mauris mollis rhoncus felis et laoreet.</p>
                     </li>
-                    <li>
-                        <h4>Graphic Design</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan laoreet nibh, ac posuere nisl pretium a. Nullam laoreet dui sit amet lacus lobortis, sit amet finibus nulla maximus. Fusce viverra est quis fringilla feugiat. Nullam leo velit, tristique at elit ut, congue vestibulum ligula. Mauris mollis rhoncus felis et laoreet.</p>
+                    <li class="fs__block slider__item">
+                        <h4 class="fs__heading">Graphic Design</h4>
+                        <p class="fs__detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan laoreet nibh, ac posuere nisl pretium a. Nullam laoreet dui sit amet lacus lobortis, sit amet finibus nulla maximus. Fusce viverra est quis fringilla feugiat. Nullam leo velit, tristique at elit ut, congue vestibulum ligula. Mauris mollis rhoncus felis et laoreet.</p>
                     </li>
-                    <li>
-                        <h4>Website Design</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan laoreet nibh, ac posuere nisl pretium a. Nullam laoreet dui sit amet lacus lobortis, sit amet finibus nulla maximus. Fusce viverra est quis fringilla feugiat. Nullam leo velit, tristique at elit ut, congue vestibulum ligula. Mauris mollis rhoncus felis et laoreet.</p>
+                    <li class="fs__block slider__item">
+                        <h4 class="fs__heading">Website Design</h4>
+                        <p class="fs__detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan laoreet nibh, ac posuere nisl pretium a. Nullam laoreet dui sit amet lacus lobortis, sit amet finibus nulla maximus. Fusce viverra est quis fringilla feugiat. Nullam leo velit, tristique at elit ut, congue vestibulum ligula. Mauris mollis rhoncus felis et laoreet.</p>
                     </li>
-                    <li>
-                        <h4>Digital Marketing</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan laoreet nibh, ac posuere nisl pretium a. Nullam laoreet dui sit amet lacus lobortis, sit amet finibus nulla maximus. Fusce viverra est quis fringilla feugiat. Nullam leo velit, tristique at elit ut, congue vestibulum ligula. Mauris mollis rhoncus felis et laoreet.</p>
+                    <li class="fs__block slider__item">
+                        <h4 class="fs__heading">Digital Marketing</h4>
+                        <p class="fs__detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan laoreet nibh, ac posuere nisl pretium a. Nullam laoreet dui sit amet lacus lobortis, sit amet finibus nulla maximus. Fusce viverra est quis fringilla feugiat. Nullam leo velit, tristique at elit ut, congue vestibulum ligula. Mauris mollis rhoncus felis et laoreet.</p>
                     </li>
-                    <li>
-                        <h4>Search Engine Optimisation (SEO)</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan laoreet nibh, ac posuere nisl pretium a. Nullam laoreet dui sit amet lacus lobortis, sit amet finibus nulla maximus. Fusce viverra est quis fringilla feugiat. Nullam leo velit, tristique at elit ut, congue vestibulum ligula. Mauris mollis rhoncus felis et laoreet.</p>
+                    <li class="fs__block slider__item">
+                        <h4 class="fs__heading">Search Engine Optimisation (SEO)</h4>
+                        <p class="fs__detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan laoreet nibh, ac posuere nisl pretium a. Nullam laoreet dui sit amet lacus lobortis, sit amet finibus nulla maximus. Fusce viverra est quis fringilla feugiat. Nullam leo velit, tristique at elit ut, congue vestibulum ligula. Mauris mollis rhoncus felis et laoreet.</p>
                     </li>
             </div>
         </section>
 
         <section class="section__content section__our-clients">
             <div class="inner container">
-                <h3>Our Clients</h3>
-                <ul class="client__grid image-grid">
-                    <li>
-                        <a href=""><img src="" /></a>
-                    </li>
+                <h3 class="content__heading primary-heading text-blue">Our Clients</h3>
+                <ul class="client__grid image-display-grid">
+                    <li class="cg__item"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/clients_hopkins-homes.png" /></a></li>
+                    <li class="cg__item"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/clients_weston-homes.png" /></a></li>
+                    <li class="cg__item"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/clients_laragh-homes.png" /></a></li>
+                    <li class="cg__item"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/clients_bradnam-joinery.png" /></a></li>
+                    <li class="cg__item"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/clients_rak-ceramics.png" /></a></li>
+                    <li class="cg__item"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/clients_baya-group.png" /></a></li>
                 </ul>
             </div>
         </section>
 
         <section class="section__content section__client-testimonials">
             <div class="inner container">
-                <h3>Our Clients Say...</h3>
+                <h3 class="content__heading primary-heading text-blue">Our Clients Say...</h3>
                 
                 <ul class="testimonials">
                     <li>
@@ -125,7 +130,7 @@ get_header();
 
         <section class="section__content section__learn-more__cta">
             <div class="inner container">
-                <h3>Want to know more?</h3>
+                <h3 class="content__heading primary-heading text-blue">Want to know more?</h3>
                 <ul class="cta__details">
                     <li class="cta__email"><a href="mailto:"><i class="icon icon__email"></i><span class="text">enquiries@tridentmarketinguk.com</span></a><li>
                     <li class="cta__telephone"><a href="tel:"><i class="icon icon__email"></i><span class="text">01473 823700</span></a><li>

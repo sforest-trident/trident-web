@@ -28,11 +28,10 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'trident-web' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="inner-wrapper">
+		<div class="inner">
 			<div class="site-branding">
 				<!-- Header > Logo -->
-				<div class="header-logo site-title logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/images/trident-logo.svg" /></a>
-				</h1>
+				<div class="header-logo site-title site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/trident-logo_white.png" /></a></div>
 				<?php
 				$trident_web_description = get_bloginfo( 'description', 'display' );
 				if ( $trident_web_description || is_customize_preview() ) :
@@ -42,7 +41,7 @@
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
+				<button class="menu-toggle " aria-controls="primary-menu" aria-expanded="false"><i class="nav-icon icon__hamburger"></i></button>
 				<?php
 				wp_nav_menu(array('theme_location' => 'primary'));
 				?>

@@ -1,0 +1,85 @@
+// Top naviagtion
+nav.main-navigation{
+
+    .menu-main-menu-container{
+        .menu{
+
+            display: none;
+
+            @include breakpoint($lg) {
+                display: flex;
+                gap: 2rem;
+                margin-right: 3rem;
+            }
+
+            li{
+
+                a{
+                    @include breakpoint($md) {
+                        color: white;
+                        text-decoration: none;
+                        border-bottom: 2px solid transparent;
+                        transition: all 0.3s ease;
+
+                        padding: 0.5rem 0;
+                        cursor: pointer;
+
+                        &:hover,
+                        &:focus{
+                            border-color: white
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+
+.menu-toggle{
+    width: 40px;
+    height: 40px;
+
+    @include breakpoint($lg) {
+        display: none;
+    }
+}
+
+.nav-icon{
+    display: block;
+
+}
+
+@mixin build_hamburger-line(){
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+
+}
+
+.icon__hamburger{
+    display: block;
+    position: relative;
+    @include build_hamburger-line();
+    
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 0;
+        
+        @include build_hamburger-line();
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 0;
+        
+        @include build_hamburger-line();
+    }
+
+}

@@ -5,10 +5,10 @@
 $site-colours: ( 
     'white': #fff,
     'black': #000,
-    'light-blue': #659aba,
+    'blue': #659aba,
     'red': #e20610,
     'charcoal': #2A2B2E,
-    'light-grey': #f4f3ee
+    'l-grey': #f4f3ee
 );
 
 //SASS Variables
@@ -21,6 +21,8 @@ $body-font-weight: 400;
 
 $primary-font-family:  'Gotham Bold', Arial, sans-serif;
 $secondary-font-family: 'Gotham Bold', Arial, sans-serif;
+
+$font-heading-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 // CSS Variables (for css output)
 // Commented these out for now as couldn't get this working in the SASS and not sure it's entirely necessary atm.
@@ -79,4 +81,8 @@ $spacing-iterations: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 20);
 $min-height-iterations: (42, 65, 89, 90, 100, 105, 114, 134, 140, 170, 190);
 $max-width-iterations: (348, 361);
 
+
+
+$sm_header-height: 100px;
+$lg_header-height: 140px;
 

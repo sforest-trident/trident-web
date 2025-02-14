@@ -1,13 +1,17 @@
-﻿header {
+﻿.site-header {
 	width: 100%;
 	z-index: 10;
 	position: absolute;
-	pointer-events: none;
 
-	@include breakpoint($md-down) {
-		position: fixed;
-		background-color: rgba(42,43,46, 0.75);
-		backdrop-filter: blur(4px);
+	@include breakpoint($lg-down) {
+		height: $sm_header-height;
+		//position: fixed;
+		//background-color: rgba(42,43,46, 0.75);
+		//backdrop-filter: blur(4px);
+	}
+
+	@include breakpoint($lg){
+		height: $lg_header-height;
 	}
 
 
@@ -22,16 +26,20 @@
 
 	&.scrolled {
 		@include breakpoint($md) {
-			background-color: rgba(42,43,46, 0.75);
-			backdrop-filter: blur(4px);
+			background-color: map-get($site-colours, 'red');
+			//backdrop-filter: blur(4px);
 			top: 0;
 			transition: top linear 0.15s;
 		}
 
-		.logo {
-			svg {
+		.site-logo {
+			.logo {
+				width: 30vw;
+				min-width: 100px;
+				max-width: 500px;
+
 				@include breakpoint($md) {
-					width: 100px;
+					
 				}
 			}
 		}
@@ -44,24 +52,31 @@
 		align-items: center;
 
 		@include breakpoint($md-down) {
-			@include padding-y(20px);
+			height: 100%;
 			@include padding-x(20px);
 		}
 
 		@include breakpoint($md) {
-			@include padding-y(50px);
+			@include padding-y(35px);
+			/* site container */
+			@include padding-x(3vw);
 		}
 	}
 
-	.logo {
+	.site-logo {
 		pointer-events: all;
+		
 
-		img {
-			width: 123px;
-			height: 18px;
+		.logo {
+			width: 30vw;
+			min-width: 140px;
+
+			@include breakpoint($md-down) {
+				max-width: 180px;
+			}
 
 			@include breakpoint($md) {
-				width: 150px;
+				max-width: 200px;
 			}
 		}
 	}

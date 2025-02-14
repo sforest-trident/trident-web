@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
 
 
-	// Smooth scroll
+	// Smooth scroll (requires: jquery)
     $('a[href^="#"]').on('click', function (event) {
 
         if (this.hash !== "") {
