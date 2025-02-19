@@ -1,0 +1,38 @@
+.featured-testimonials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .tml{
+        &__body{
+            font-size: 48px;
+            padding: 2rem 2rem 1rem;
+            text-align: center;
+            position: relative;
+
+            &:before{
+                content: '"';
+                font-size: 5rem;
+                font-style: italic;
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: map-get($site-colours, 'red'); 
+            }
+
+            &:after{
+                content: '"';
+                font-size: 5rem;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                font-style: italic;
+                color: map-get($site-colours, 'red');
+            }
+        }
+
+        &__author{
+            color: map-get($site-colours, 'red');
+        }
+    }
+}

@@ -12,7 +12,7 @@ button{
 	display: block;
 }
 
-.cta {
+.cta{
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
@@ -56,5 +56,39 @@ button{
 	display: flex;
 }
 
+.cta__text{
+	$icon-size: 10px;
+	$font-size: 18px;
+	$text-colour: $cta_text-colour;
+	$text-hover-colour: $cta_text-hover-colour;
+	$icon-colour: $cta_icon-colour;
+	
+
+	position: relative;
+	padding-right: calc(0.5rem + $icon-size);
+	font-size: $font-size;
+	color: $text-colour;
+	text-decoration: none;
+
+	&:hover,
+	&:focus{
+		color: $text-hover-colour;
+		text-decoration: underline;
+	}
+
+	&::after{
+		content: '';
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 0; 
+		height: 0; 
+		border-top: $icon-size solid transparent;
+		border-bottom: $icon-size solid transparent;
+		border-left: $icon-size solid $icon-colour;
+	}
+}
 
 
+
+ 

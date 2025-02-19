@@ -1,0 +1,21 @@
+.content{
+    // Two column layout (desktop only)
+    &__two-col{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include breakpoint($lg){
+            flex-direction: row;
+        }
+
+        .col{
+            &.full-width{
+                @include breakpoint($lg){
+                    flex: 0 0 50%;
+                }
+            }
+        }
+
+    }
+}

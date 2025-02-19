@@ -8,7 +8,7 @@ $site-colours: (
     'blue': #659aba,
     'red': #e20610,
     'charcoal': #2A2B2E,
-    'l-grey': #f4f3ee
+    'l-grey': #f6f3ee
 );
 
 //SASS Variables
@@ -24,6 +24,10 @@ $secondary-font-family: 'Gotham Bold', Arial, sans-serif;
 
 $font-heading-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
+$cta_text-colour: $body-text-color;
+$cta_text-hover-colour: $body-text-color;
+$cta_icon-colour: map-get($site-colours, 'red');
+
 // CSS Variables (for css output)
 // Commented these out for now as couldn't get this working in the SASS and not sure it's entirely necessary atm.
 /*
@@ -34,6 +38,8 @@ $font-heading-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 --body-line-height: #{$body-line-height}; 
 */
 
+// Site Max Width
+$site-max-width: 1280px;
 
 
 // Breakpoints

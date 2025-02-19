@@ -110,39 +110,45 @@ get_header();
                     <li class="cg__item"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/clients_rak-ceramics.png" /></a></li>
                     <li class="cg__item"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/clients_baya-group.png" /></a></li>
                 </ul>
+
+                <div class="cta__block py-2 text-right">
+                    <a href="#" class="cta__text">Read our case studies</a>
+                </div>
             </div>
         </section>
 
-        <section class="section__content section__client-testimonials">
+        <section class="section__content section__testimonials section__divider">
+            
             <div class="inner container">
                 <h3 class="content__heading primary-heading text-blue">Our Clients Say...</h3>
                 
-                <ul class="testimonials">
-                    <li>
-                        <div class="tml__body">
-                            <p>The team seek to understand our needs, provide options and guidance and then deliver a high quality service. Trident are emotionally invested in our success and that shows with every interaction.</p>
-                        </div>
-                        <div class="tml__author">Ben Bryden, RAK</div>
+                <div class="featured-testimonials">
+                    <div class="tml__body">
+                        <p>The team seek to understand our needs, provide options and guidance and then deliver a high quality service. Trident are emotionally invested in our success and that shows with every interaction.</p>
+                    </div>
+                    <div class="tml__author">Ben Bryden, RAK</div>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <section class="section__content section__learn-more__cta">
-            <div class="inner container">
-                <h3 class="content__heading primary-heading text-blue">Want to know more?</h3>
-                <ul class="cta__details">
-                    <li class="cta__email"><a href="mailto:"><i class="icon icon__email"></i><span class="text">enquiries@tridentmarketinguk.com</span></a><li>
-                    <li class="cta__telephone"><a href="tel:"><i class="icon icon__email"></i><span class="text">01473 823700</span></a><li>
-                </ul>
+        <section class="section__content section__learn-more__cta section__l-grey">
+            <div class="inner container content__two-col">
+                <div class="col full-width">
+                    <h3 class="content__heading primary-heading text-blue">Want to know more?</h3>
+                    <ul class="cta__details">
+                        <li class="cta__email"><a href="mailto:"><i class="icon icon__email"></i><span class="text">enquiries@tridentmarketinguk.com</span></a><li>
+                        <li class="cta__telephone"><a href="tel:"><i class="icon icon__email"></i><span class="text">01473 823700</span></a><li>
+                    </ul>
+                </div>
 
-                <div class="cta__form">
+                <div class="cta__form col full-width">
                     <form>
-                        <div class="form__field-block">
+                        <div class="form__field-block inline">
                             <label for="_a">Full Name:</label>
                             <input type="text" name="_a" />
                         </div>
-                        <div class="form__field-block">
+                        <div class="form__field-block inline">
                             <label for="_b">Phone Number:</label>
                             <input type="number" name="_b" />
                         </div>

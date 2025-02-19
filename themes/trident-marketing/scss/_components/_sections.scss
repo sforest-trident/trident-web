@@ -6,13 +6,18 @@
 	// .section__content - this is a main, generic content panel, use as a standard for most content sections.
 	&__content {
 		.container {
+			@include container();
+			
 			padding-top: 3rem;
 			padding-bottom: 3rem;
+
 				
 			@include breakpoint($md){
 				padding-top: 3rem;
 				padding-bottom: 3rem;
 			}
+
+			
 		}
 		
 		.heading{
@@ -33,6 +38,13 @@
 			}
 		}
 	}
+
+	&__divider{
+		.inner{
+			border-top: 1px solid rgba(128,128,128, 0.5);
+		}
+	}
+
 	
 	// .section__who-we-are
 	&__who-we-are {
@@ -55,12 +67,31 @@
 		}
   	}
 
+	&__our-clients{
+		.content__heading{
+			margin-bottom: 2rem;
+		}
+
+	}
+
+	&__learn-more-cta{
+
+		.cta__form{
+			
+		}
+	}
+
 
 
 	// Section colour variations ---------------------
 	&__blue{
 		background-color: map-get($site-colours, 'blue');
 		color: white;
+	}
+
+	&__l-grey{
+		background-color: map-get($site-colours, 'l-grey');
+		color: black;
 	}
   }
 

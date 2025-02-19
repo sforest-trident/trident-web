@@ -21,6 +21,7 @@ Text Domain: trident-web
 @import "_core/_core.scss";
 @import "_core/_typography.scss";
 @import "_core/_layout.scss";
+@import "_core/_forms.scss";
 
 // Components
 @import "_components/_header.scss";
@@ -35,6 +36,8 @@ Text Domain: trident-web
 @import "_components/_feature-blocks";
 @import "_components/_featured-services";
 @import "_components/_image-display-grid";
+@import "_components/_featured-testimonials";
+@import "_components/_content-layouts";
 
 
 
