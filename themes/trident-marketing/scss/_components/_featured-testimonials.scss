@@ -5,10 +5,14 @@
 
     .tml{
         &__body{
-            font-size: 48px;
+            font-size: 32px;
             padding: 2rem 2rem 1rem;
             text-align: center;
             position: relative;
+
+            @include breakpoint(lg){
+                font-size: 48px;
+            }
 
             &:before{
                 content: '"';

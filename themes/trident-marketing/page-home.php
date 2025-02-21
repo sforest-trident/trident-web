@@ -136,32 +136,32 @@ get_header();
             <div class="inner container content__two-col">
                 <div class="col full-width">
                     <h3 class="content__heading primary-heading text-blue">Want to know more?</h3>
-                    <ul class="cta__details">
-                        <li class="cta__email"><a href="mailto:"><i class="icon icon__email"></i><span class="text">enquiries@tridentmarketinguk.com</span></a><li>
-                        <li class="cta__telephone"><a href="tel:"><i class="icon icon__email"></i><span class="text">01473 823700</span></a><li>
+                    <ul class="cta__details cta__list">
+                        <li class="cta__item cta__email"><a href="mailto:" class="cta__item-link"><i class="far fa-envelope cta__item-icon icon icon__email"></i><span class="text">enquiries@tridentmarketinguk.com</span></a><li>
+                        <li class="cta__item cta__telephone"><a href="tel:" class="cta__item-link"><i class="fas fa-phone cta__item-icon icon icon__email"></i><span class="text">01473 823700</span></a><li>
                     </ul>
                 </div>
 
-                <div class="cta__form col full-width">
-                    <form>
-                        <div class="form__field-block inline">
-                            <label for="_a">Full Name:</label>
-                            <input type="text" name="_a" />
+                <div class="cta__form-wrapper">
+                    <form class="cta__form">
+                        <div class="form__field-block">
+                            <label for="_a" class="ff__field-label">Full Name:</label>
+                            <input type="text" name="_a" class="ff__field text-input" />
                         </div>
-                        <div class="form__field-block inline">
-                            <label for="_b">Phone Number:</label>
-                            <input type="number" name="_b" />
-                        </div>
-                        <div class="form__field-block full-width">
-                            <label for="_c">Email Address:</label>
-                            <input type="text" name="_c" />
+                        <div class="form__field-block">
+                            <label for="_b" class="ff__field-label">Phone Number:</label>
+                            <input type="number" name="_b" class="ff__field number-input" />
                         </div>
                         <div class="form__field-block full-width">
-                            <label for="_d">How can we help?</label>
-                            <input type="textarea" name="_d" />
+                            <label for="_c" class="ff__field-label">Email Address:</label>
+                            <input type="email" name="_c" class="ff__field email-input" />
+                        </div>
+                        <div class="form__field-block full-width">
+                            <label for="_d" class="ff__field-label">How can we help?</label>
+                            <input type="textarea" name="_d" class="ff__field textarea" />
                         </div>
                         <div class="form__field-block form__cta_block">
-                            <input type="submit" type="button" value="Send" />
+                            <input type="submit" type="button" value="Send" class="ff__field button-input" />
                         </div>
                     </form>
                 </div>

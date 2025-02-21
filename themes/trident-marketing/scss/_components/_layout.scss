@@ -12,6 +12,11 @@ body{
 
 }
 
+main{
+	display: flex;
+	flex-direction: column;
+}
+
 .font-heading{
     font-family: $font-heading-family;
 }

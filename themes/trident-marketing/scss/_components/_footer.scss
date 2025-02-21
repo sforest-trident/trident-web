@@ -9,6 +9,10 @@
 		padding-top: 3rem;
 		padding-bottom: 3rem;
 
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
 	}
 	
 	
@@ -22,13 +26,32 @@
 
 	.footer-logo{
 		svg{
-			//width: 80px; // determines the width of the svg box wrapper.
+			width: 100px;
+			height: 100px;
+			
 			use{
 				fill: #fff;
 
 				.st1 {
 					fill: #e30613;
 				}
+			}
+		}
+	}
+
+	.footer{
+		&__socials-block{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 0.5rem;
+			border-top: 1px solid #fff;
+			margin: 0 5rem;
+			padding-top: 1rem;
+
+			ul{
+				display: flex;
+				gap: 0.5rem;
 			}
 		}
 	}

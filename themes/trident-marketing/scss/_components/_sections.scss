@@ -74,10 +74,58 @@
 
 	}
 
-	&__learn-more-cta{
+	&__learn-more__cta{
+		.cta{
+			&__details{
+				margin-top: 2rem;
+			}
 
-		.cta__form{
+			&__list{
+				display: flex;
+				flex-direction: column;
+				gap: 0.75rem;
+			}
 			
+			&__item{
+
+				&-icon{
+					font-size: 1.5rem;
+				}
+
+				&-link{
+					display: flex;
+					gap: 0.75rem;
+					text-decoration: none;
+					align-items: center;
+					color: black;
+
+					&:hover,
+					&:focus{
+						.text{
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+
+			&__form{
+				gap: 1rem 0.5rem;
+				justify-content: space-between;
+
+				.form__field-block{
+					.ff{
+						&__field{
+							&.text-input,
+							&.email-input,
+							&.number-input,
+							&.textarea{
+								border-color: map-get($site-colours, 'red');
+								background-color: transparent;
+							}
+						}
+					}
+				}	
+			}
 		}
 	}
 

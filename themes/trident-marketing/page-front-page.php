@@ -132,22 +132,22 @@
                     <form>
                         <div class="form__field-block">
                             <label for="_a">Full Name:</label>
-                            <input type="text" name="_a" />
+                            <input type="text" name="_a" class="ff_field text-input" />
                         </div>
                         <div class="form__field-block">
                             <label for="_b">Phone Number:</label>
-                            <input type="number" name="_b" />
+                            <input type="number" name="_b" class="ff_field number-input" />
                         </div>
                         <div class="form__field-block full-width">
                             <label for="_c">Email Address:</label>
-                            <input type="text" name="_c" />
+                            <input type="email" name="_c" class="ff_field email-input" />
                         </div>
                         <div class="form__field-block full-width">
                             <label for="_d">How can we help?</label>
-                            <input type="textarea" name="_d" />
+                            <input type="textarea" name="_d" class="ff_field textarea" />
                         </div>
                         <div class="form__field-block form__cta_block">
-                            <input type="submit" type="button" value="Send" />
+                            <input type="submit" type="button" value="Send" class="ff_field button-input" />
                         </div>
                     </form>
                 </div>

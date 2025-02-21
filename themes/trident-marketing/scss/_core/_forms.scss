@@ -4,16 +4,52 @@ form{
     width: 100%;
     flex-wrap: wrap;
 
-    .form__field-block{
-        display: flex;
-        flex-direction: column;        
+    .form{
+        &__field-block{
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;        
 
-        &.inline{
-            flex: 1;
+            &.inline{
+                flex: 1;
+            }
+
+            &.full-width{
+                width: 100%;
+            }
+
+            .ff{
+                &__field-label{
+                    font-size: 0.75rem;
+                    margin-bottom: 0.75rem;
+                }
+
+                &__field{
+                    &.text-input,
+                    &.number-input,
+                    &.email-input,
+                    &.textarea{
+                        border: unset;
+                        border: 1px solid #ccc;
+                        padding: 0.5rem;
+                        font-size: 0.85rem;
+                    }
+                }
+
+
+            }
         }
 
-        &.full-width{
-            width: 100%;
+        &__cta_block{
+            flex: unset;
+
+            .button-input{
+                background-color: map-get($site-colours, 'red');
+                color: white;
+                border-color: transparent;
+                padding: 0.5rem 1.5rem;
+                cursor: pointer;
+            }
         }
     }
 }
